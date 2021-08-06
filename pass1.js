@@ -81,4 +81,4 @@ const updateView = (targetId, newId, label, element, method = '') => {
   parentElement.replaceChild(newElement, currentElement);
 }
 
-document.getElementById("getPassword").addEventListener("click", getPassword);
+
