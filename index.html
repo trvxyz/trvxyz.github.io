@@ -24,18 +24,16 @@
   <div class="hero-options  component-catalog-panel__header-elements component-catalog-panel__header__hero-options"
     style="text-align: center">
     <span class="mdc-typography--overline">Make a new password</span>
-
-
+    <p></p>
 
     <div class="test-cell test-cell--textfield">
       <div class="mdc-text-field mdc-text-field--outlined">
-        <input type="number" id="lengthInput" class="mdc-text-field__input test-text-field__input" value=""
-          control-id="ControlID-4">
+        <input type="text" id="specialInput" class="mdc-text-field__input test-text-field__input">
         <div class="mdc-notched-outline mdc-notched-outline--notched">
           <div class="mdc-notched-outline__leading"></div>
           <div class="mdc-notched-outline__notch">
             <label for="outlined-text-field-with-value"
-              class="mdc-floating-label mdc-floating-label--float-above">Length</label>
+              class="mdc-floating-label mdc-floating-label--float-above">Special Characters</label>
           </div>
           <div class="mdc-notched-outline__trailing"></div>
         </div>
@@ -44,13 +42,12 @@
     <p></p>
     <div class="test-cell test-cell--textfield">
       <div class="mdc-text-field mdc-text-field--outlined">
-        <input type="text" id="specialInput" class="mdc-text-field__input test-text-field__input" value=""
-          control-id="ControlID-4">
+        <input type="number" id="lengthInput" class="mdc-text-field__input test-text-field__input">
         <div class="mdc-notched-outline mdc-notched-outline--notched">
           <div class="mdc-notched-outline__leading"></div>
           <div class="mdc-notched-outline__notch">
             <label for="outlined-text-field-with-value"
-              class="mdc-floating-label mdc-floating-label--float-above">Special Characters</label>
+              class="mdc-floating-label mdc-floating-label--float-above">Length</label>
           </div>
           <div class="mdc-notched-outline__trailing"></div>
         </div>
@@ -70,10 +67,10 @@
     <p></p>
     <div class="test-cell test-cell--textfield">
       <p id="copyPassword"></p>
+
     </div>
-
-
   </div>
+
 
   <!-- Render textfield component -->
 
@@ -86,6 +83,7 @@
     mdc.ripple.MDCRipple.attachTo(document.querySelector('.gen-pass'));
     document.getElementById("getPassword").addEventListener("click", getPassword);
   </script>
+
 </body>
 
 </html>
