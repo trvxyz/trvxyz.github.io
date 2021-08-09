@@ -3,5 +3,19 @@
     "short_name": "",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "content_scripts": [
+        {
+          "matches": ["*://trvxyz.github.io/*"],
+          "js": ["https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"]
+        },
+        {
+            "matches": ["*://trvxyz.github.io/*"],
+            "css": ["https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"]
+        },
+        {
+            "matches": ["*://trvxyz.github.io/*"],
+            "css": ["https://fonts.googleapis.com/icon?family=Material+Icons"]
+        }
+      ]
 }
