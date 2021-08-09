@@ -8,31 +8,85 @@
   <link rel="shortcut icon" type="image/png" href="pass.png" />
   <link rel="apple-touch-icon" href="pass.png">
   <link rel="manifest" href="site.webmanifest">
-  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <!-- Required styles for Material Web -->
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <link rel="stylesheet"
+    href="https://material-components.github.io/material-components-web-catalog/static/css/styles/App.scss">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width"></meta>
-  <meta name="apple-mobile-web-app-capable" content="yes"></meta>
-  <meta name="apple-mobile-web-app-status-bar-style" content="default"></meta>
+  <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width">
+  </meta>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  </meta>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  </meta>
 </head>
 
 <body>
-  <div>
-    <button class="mdc-button mdc-button--raised mdc-button--leading gen-pass" id="getPassword">
-      <span class="mdc-button__ripple"></span>
-      <i class="material-icons mdc-button__icon" aria-hidden="true"
-        >vpn_key</i
-      >
-      <span class="mdc-button__label">Generate password</span>
-    </button>
-    <input type="number" id="lengthInput" placeholder="Length">
-    <input type="text" id="specialInput" placeholder="Special Characters">
-    <p id="passwordValue"></p>
-    <p id="copyPassword"></p>
+  <div class="hero-options  component-catalog-panel__header-elements component-catalog-panel__header__hero-options"
+    style="text-align: center">
+    <span class="mdc-typography--overline">Make a new password</span>
+
+
+
+    <div class="test-cell test-cell--textfield">
+      <div class="mdc-text-field mdc-text-field--outlined">
+        <input type="number" id="lengthInput" class="mdc-text-field__input test-text-field__input" value=""
+          control-id="ControlID-4">
+        <div class="mdc-notched-outline mdc-notched-outline--notched">
+          <div class="mdc-notched-outline__leading"></div>
+          <div class="mdc-notched-outline__notch">
+            <label for="outlined-text-field-with-value"
+              class="mdc-floating-label mdc-floating-label--float-above">Length</label>
+          </div>
+          <div class="mdc-notched-outline__trailing"></div>
+        </div>
+      </div>
+    </div>
+    <p></p>
+    <div class="test-cell test-cell--textfield">
+      <div class="mdc-text-field mdc-text-field--outlined">
+        <input type="text" id="specialInput" class="mdc-text-field__input test-text-field__input" value=""
+          control-id="ControlID-4">
+        <div class="mdc-notched-outline mdc-notched-outline--notched">
+          <div class="mdc-notched-outline__leading"></div>
+          <div class="mdc-notched-outline__notch">
+            <label for="outlined-text-field-with-value"
+              class="mdc-floating-label mdc-floating-label--float-above">Special Characters</label>
+          </div>
+          <div class="mdc-notched-outline__trailing"></div>
+        </div>
+      </div>
+    </div>
+    <p></p>
+    <div class="test-cell test-cell--textfield">
+      <button class="mdc-button mdc-button--raised gen-pass"> <span class="mdc-button__ripple"
+          id="getPassword"></span><i class="material-icons mdc-button__icon" aria-hidden="true">vpn_key</i> Generate
+        password</button>
+    </div>
+    <p></p>
+    <div class="test-cell test-cell--textfield">
+
+      <p id="passwordValue"></p>
+    </div>
+    <p></p>
+    <div class="test-cell test-cell--textfield">
+      <p id="copyPassword"></p>
+    </div>
+
+
   </div>
+
+  <!-- Render textfield component -->
+
+  <!-- Required Material Web JavaScript library -->
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
   <script>
+    // Instantiate single textfield component rendered in the document
+    mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
     mdc.ripple.MDCRipple.attachTo(document.querySelector('.gen-pass'));
     document.getElementById("getPassword").addEventListener("click", getPassword);
   </script>
+</body>
 
 </html>
